@@ -3,8 +3,8 @@ C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\bin\Debug\TestS
 C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\bin\Debug\TestService-2.pdb
 C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\bin\Debug\Topshelf.dll
 C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\bin\Debug\Topshelf.xml
-C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\obj\Debug\TestService-2.csproj.AssemblyReference.cache
 C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\obj\Debug\TestService-2.csproj.CoreCompileInputs.cache
 C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\obj\Debug\TestService-2.csproj.CopyComplete
 C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\obj\Debug\TestService-2.exe
 C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\obj\Debug\TestService-2.pdb
+C:\Users\ahmed.abdullah\source\repos\TestService-2\TestService-2\obj\Debug\TestService-2.csproj.AssemblyReference.cache
