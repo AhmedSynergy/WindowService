@@ -14,5 +14,3 @@ Omar,XYZ,24,15/02/2022 11:21:22 am
 Omar,ABC,10,16/02/2022 11:21:22 am
 Saad,ABC,10,16/02/2022 11:21:22 pm
 Saad,XYZ,10,16/02/2022 11:21:22 pm
-Ahmed,Charlie Chaplin,44,19/02/2022 11:21:22 am
-Saad,Charlie Chaplin,4,21/02/2022 11:21:22 am
