@@ -1,4 +1,0 @@
-Book Name: XYZ
-Quantity: 24
-Order Date: 15/02/2022 11:21:22 am
-

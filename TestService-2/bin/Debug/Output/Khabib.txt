@@ -1,8 +1,0 @@
-Book Name: XYZ
-Quantity: 5
-Order Date: 18/02/2022 11:21:22 pm
-
-Book Name: XYZ
-Quantity: 5
-Order Date: 18/02/2022 11:22:22 pm
-

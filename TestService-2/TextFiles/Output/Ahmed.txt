@@ -10,3 +10,7 @@ Book Name: ABC
 Quantity: 40
 Order Date: 15/02/2022 10:21:22 am
 
+Book Name: Charlie Chaplin
+Quantity: 44
+Order Date: 19/02/2022 11:21:22 am
+

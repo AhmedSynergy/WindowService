@@ -1,8 +1,0 @@
-Harry Potter and the Chamber of Secrets,200
-Harry Potter and the Half Blood Prince,100
-Harry Potter and the Goblet of Fire,300
-Harry Potter and the Order of Phoenix,100
-Harry Potter and the Philosopher's Stone,1200
-Charlie Chaplin,200
-ABC,100
-XYZ,300

@@ -53,7 +53,7 @@ namespace TestService_2
 
             ToDo();
 
-            var watcher = new FileSystemWatcher(@"..\..\TextFiles");
+            var watcher = new FileSystemWatcher(@"..\..\TextFiles\Input");
 
             watcher.NotifyFilter = NotifyFilters.Attributes
                                  | NotifyFilters.CreationTime
@@ -110,7 +110,7 @@ namespace TestService_2
         {
 
             const Int32 BufferSize = 128;
-            using (var fileStream = File.OpenRead(@"..\..\TextFiles\input.txt"))
+            using (var fileStream = File.OpenRead(@"..\..\TextFiles\Input\Input.txt"))
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
             {
                 String line;
