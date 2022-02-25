@@ -19,26 +19,98 @@ namespace TestService_2
         static object LinksLock1 = new object();
         static object LinksLock2 = new object();
 
+
+
+
         public TestService()
         {
             Entries = new List<EntryObject>();
-            System.IO.DirectoryInfo di = new DirectoryInfo("Output");
+            System.IO.DirectoryInfo di = new DirectoryInfo(@"..\..\TextFiles\Output");
 
             foreach (FileInfo file in di.GetFiles())
             {
                 file.Delete();
             }
 
+
+            lock (LinksLock2)
+            {
+                string[] lines = File.ReadAllLines(@"..\..\TextFiles\Inventory - Copy.txt");
+
+                File.WriteAllLines(@"..\..\TextFiles\Inventory.txt", lines);
+
+            }
+
+
             _timer = new System.Timers.Timer(5000) { AutoReset = true };
-            _timer.Elapsed += ToDo;
+            //  _timer.Elapsed += ToDo;
+
+
+
+
+
+            // test
+
+            ToDo();
+
+            var watcher = new FileSystemWatcher(@"..\..\TextFiles");
+
+            watcher.NotifyFilter = NotifyFilters.Attributes
+                                 | NotifyFilters.CreationTime
+                                 | NotifyFilters.DirectoryName
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.LastAccess
+                                 | NotifyFilters.LastWrite
+                                 | NotifyFilters.Security
+                                 | NotifyFilters.Size;
+
+            watcher.Changed += OnChanged;
+            watcher.Created += OnCreated;
+            watcher.Deleted += OnDeleted;
+            watcher.Renamed += OnRenamed;
+            
+            watcher.Error += OnError;
+
+            watcher.Filter = "*.txt";
+            watcher.IncludeSubdirectories = true;
+            watcher.EnableRaisingEvents = true;
+
 
         }
 
-        private void ToDo(object sender, ElapsedEventArgs e)
+        private void OnError(object sender, ErrorEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void OnRenamed(object sender, RenamedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void OnDeleted(object sender, FileSystemEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void OnCreated(object sender, FileSystemEventArgs e)
+        {
+            ToDo();
+        }
+
+        private void OnChanged(object sender, FileSystemEventArgs e)
+        {
+            ToDo();
+
+
+
+        }
+
+        private void ToDo()
         {
 
             const Int32 BufferSize = 128;
-            using (var fileStream = File.OpenRead("input.txt"))
+            using (var fileStream = File.OpenRead(@"..\..\TextFiles\input.txt"))
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
             {
                 String line;
@@ -136,7 +208,7 @@ namespace TestService_2
                 string[] Lines = new string[] { "Book Name: " + Entry.BookName, "Quantity: " + Entry.Quantity.ToString(), "Order Date: " + Entry.OrderDate + "\n" };
 
 
-                File.AppendAllLines("Output\\" + Entry.CustomerName + ".txt", Lines);
+                File.AppendAllLines(@"..\..\TextFiles\Output\" + Entry.CustomerName + ".txt", Lines);
             }
         }
 
@@ -148,7 +220,7 @@ namespace TestService_2
             {
 
 
-                using (StreamReader InventoryFile = new StreamReader("Inventory.txt"))
+                using (StreamReader InventoryFile = new StreamReader(@"..\..\TextFiles\Inventory.txt"))
                 {
                     String Line;
                     while ((Line = InventoryFile.ReadLine()) != null)
@@ -196,7 +268,7 @@ namespace TestService_2
 
                 // lock (LinksLock)
                 //  {
-                using (StreamWriter InventoryFileWriter = new StreamWriter("Inventory.txt"))
+                using (StreamWriter InventoryFileWriter = new StreamWriter(@"..\..\TextFiles\Inventory.txt"))
                 {
                     foreach (String Line in InventoryLines)
                     {
@@ -220,7 +292,7 @@ namespace TestService_2
 
             lock (LinksLock)
             {
-                using (StreamWriter InventoryFileWriter = new StreamWriter(@"C:\Users\ahmed.abdullah\Desktop\ServicesTest\TestService\Inventory.txt"))
+                using (StreamWriter InventoryFileWriter = new StreamWriter(@"..\..\TextFiles\Inventory.txt"))
                 {
                     foreach (String Line in InventoryLines)
                     {

@@ -4,5 +4,5 @@ Harry Potter and the Goblet of Fire,298
 Harry Potter and the Order of Phoenix,59
 Harry Potter and the Philosopher's Stone,1176
 Charlie Chaplin,156
-ABC,55
-XYZ,184
+ABC,40
+XYZ,194
