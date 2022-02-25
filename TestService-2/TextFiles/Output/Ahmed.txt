@@ -1,12 +1,12 @@
+Book Name: Harry Potter and the Chamber of Secrets
+Quantity: 34
+Order Date: 14/02/2022 10:21:22 am
+
 Book Name: Charlie Chaplin
 Quantity: 44
 Order Date: 14/02/2022 11:21:22 am
 
 Book Name: ABC
-Quantity: 20
+Quantity: 40
 Order Date: 15/02/2022 10:21:22 am
-
-Book Name: Harry Potter and the Chamber of Secrets
-Quantity: 34
-Order Date: 14/02/2022 10:21:22 am
 
